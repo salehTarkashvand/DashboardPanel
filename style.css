@@ -109,6 +109,9 @@ nav .menu-items {
     border-radius: 50% ;
     background-color: var(--primary-color);
 }
+body.dark li a:hover:before {
+    background-color: var(--text-color);
+}
 .menu-items li a i {
 
     min-width: 45px;
@@ -129,6 +132,9 @@ nav .menu-items {
     color: var(--black-light-color);
     transition: var(--tran-02);
 }
+body.dark .menu-items li a i{
+    color: var(--text-color);
+}
 nav.close .menu-items li a .link-name{
     opacity: 0%;
     pointer-events: none;
@@ -136,8 +142,12 @@ nav.close .menu-items li a .link-name{
 .menu-items li a:hover i{
     color: var(--primary-color);
 }
+
 .menu-items li a:hover .link-name{
     color: var(--primary-color);
+}
+body.dark .menu-items li a:hover .link-name{
+    color: var(--text-color);
 }
 .menu-items .mode{
     border-top: 1PX solid var(--border-color);
@@ -145,6 +155,18 @@ nav.close .menu-items li a .link-name{
     white-space: nowrap;
 
 }
+.menu-items .mode .modes:hover::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50% ;
+    background-color: var(--primary-color);
+   
+
+}
+
 .menu-items .mode .dark-mode {
     display: flex ;
     align-items: center ;
@@ -153,7 +175,7 @@ nav.close .menu-items li a .link-name{
     
 }
 nav.close .menu-items .mode .dark-mode{
-   
+    
 }
 .menu-items .mode .dark-mode .mode-toggle {
     
@@ -239,7 +261,7 @@ nav.close ~ .dashboard .top {
 .dashboard .top .search-box {
     position: relative;
     height: 45px;
-    max-width: 1600px;
+    max-width: 1400px;
     min-width: 200px;
     width: 100%;
     margin: 0 30px;
@@ -280,4 +302,34 @@ nav.close ~ .dashboard .top {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+.dashboard .dash-content{
+    padding-top: 100px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+
+} 
+.dashboard .dash-content .title  {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 30px;
+}
+.dash-content .overview .title i{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 41px;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 7px;
+    background-color: var(--primary-color);
+    color:var(--title-icon-color) ;
+
+}
+.dash-content .overview .title .text {
+    padding-left: 10px;
 }
