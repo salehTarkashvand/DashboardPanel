@@ -43,14 +43,22 @@ nav{
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 240px;
     padding: 10px 14px;
     background-color: var(--panel-color);
+    border-right: 1px solid var(--border-color);
+    transition: var(--tran-05);
 }
-nav .logo-name{
+nav.close{
+    width: 73px;
+
+}
+nav .logo {
     display: flex;
     align-items: center;
 }
+
+
 nav .logo-image {
     
     display: flex;
@@ -63,11 +71,15 @@ nav .logo-image img{
     object-fit: cover;
     border-radius: 50% ;
 }
-nav .logo-name .logo-name {
+nav .logo .logo-name {
     font-size: 22px;
     font-weight: 600;
     color: var(--text-color);
     margin-left: 14px;
+    transition: var(--tran-03);
+}
+nav.close .logo-name{
+    opacity: 0%;
 }
 nav .menu-items {
     margin-top: 40px ;
@@ -115,6 +127,11 @@ nav .menu-items {
     justify-content: center;
     align-items: center;
     color: var(--black-light-color);
+    transition: var(--tran-02);
+}
+nav.close .menu-items li a .link-name{
+    opacity: 0%;
+    pointer-events: none;
 }
 .menu-items li a:hover i{
     color: var(--primary-color);
@@ -122,13 +139,23 @@ nav .menu-items {
 .menu-items li a:hover .link-name{
     color: var(--primary-color);
 }
-.menu-items .mode {
+.menu-items .mode{
+    border-top: 1PX solid var(--border-color);
+    padding-top: 10px;
+    white-space: nowrap;
+
+}
+.menu-items .mode .dark-mode {
     display: flex ;
     align-items: center ;
     position: relative;
+    transition: var(--tran-03);
     
 }
-.menu-items .mode-toggle {
+nav.close .menu-items .mode .dark-mode{
+   
+}
+.menu-items .mode .dark-mode .mode-toggle {
     
     position: absolute;
     display: flex;
@@ -140,10 +167,12 @@ nav .menu-items {
     border-radius: 20;
     cursor: pointer;
    
+   
 }
-.menu-items .switch{
+.menu-items .mode .dark-mode .mode-toggle .switch{
     background-color: var(--box1-color);
     position: relative;
+    left: 15px;
     border-radius: 50px;
     display: inline-block ;
     width: 40px;
@@ -151,7 +180,7 @@ nav .menu-items {
 
     
 }
-.menu-items .switch::before{
+.menu-items .mode .dark-mode .mode-toggle .switch::before{
     content:"";
     position: absolute;
     width: 16px;
@@ -162,8 +191,93 @@ nav .menu-items {
     background-color: var(--panel-color);
     transition: var(--tran-05);
 }
-body.dark .switch::before {
+body.dark .menu-items .mode .dark-mode .mode-toggle .switch::before {
     left: 20px;
 }
 
 
+.dashboard{
+   
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 240px;
+    background-color: var(--panel-color);
+    padding: 10px 14px;
+    transition: var(--tran-05);
+}
+nav.close ~ .dashboard {  
+    left: 73px;
+    /* width: calc(100% - 73px);   */
+}
+
+.dashboard .top{
+    padding: 10px 14px;
+    top: 0;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    left: 250px;
+    justify-content: space-between;
+    width: calc(100% - 250px);
+    background-color:var(--panel-color);
+    transition: var(--tran-05);
+    
+
+}
+nav.close ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top .sidebar-toggle{
+    font-size: 25px;
+    color: var(--text-color);
+    cursor: pointer;
+    
+}
+.dashboard .top .search-box {
+    position: relative;
+    height: 45px;
+    max-width: 1600px;
+    min-width: 200px;
+    width: 100%;
+    margin: 0 30px;
+    
+}
+.dashboard .top .search-box input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px ;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    padding: 0 25px 0 50px ;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+
+
+}
+.dashboard .top .search-box i {
+    position: absolute;
+    z-index: 3;
+    left: 15px;
+    font-size: 22px ;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--black-light-color);
+
+    
+    
+}
+.dashboard .top .uzer-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard .top .uzer-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
