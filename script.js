@@ -1,6 +1,6 @@
 const body = document.querySelector("body") ,
     modeToggle = body.querySelector(".mode-toggle") , 
-    sidebarToggle = document.querySelector(".sidebar-toggle") ,
+    sidebarToggle = document.querySelector(".icon") ,
     sidebar = document.querySelector("nav")
 
 modeToggle.addEventListener("click" , ()=>{
@@ -8,18 +8,20 @@ modeToggle.addEventListener("click" , ()=>{
 })
 
 sidebarToggle.addEventListener("click" , ()=>{
-    sidebar.classList.toggle("close")
+    sidebar.classList.toggle("close") 
 })
 
 
 
 window.addEventListener('resize', ()=>{
 
-    if (window.innerWidth > 376) {
+    if (window.innerWidth < 600) {
         // Then log this message to the console
-        sidebar.classList.toggle("close")
-      } else {
-        sidebar.classList.toggle("close")
-      }
+        sidebar.className = `${sidebar.className} close`
+      } 
+      else{
+        
+        sidebar.className =  sidebar.className.toString ;
+      }    
 
 });

@@ -9,89 +9,168 @@
     <title>DashbordPanel</title>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <div class="logo-image">
-                <img src="img/logo.png" alt="">
-            </div>
-            <span class="logo-name">losPePes</span>
-        </div>
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li>
-                    <a href="#">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                    <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">content</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                    <i class="uil uil-chart"></i>
-                    <span class="link-name">analytics</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                    <i class="uil uil-thumbs-up"></i>
-                    <span class="link-name">like</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                    <i class="uil uil-comments"></i>
-                    <span class="link-name">comment</span>
-                    </a>
-                </li> 
-                
-            </ul>
-            <ul class="mode" >
-                <li class=" logout-mode">
-                    <a class="modes" href="#">
-                    <i class="uil uil-signout"></i>
-                    <span class="link-name">log out</span>
-                    </a>
-                </li>
-                <li class=" dark-mode" >
-                    <a class="modes" href="#">
-                    <i class="uil uil-moon"></i>
-                    <span class="link-name">dark mood</span>
-                    </a>
-                    <div class="mode-toggle"> 
-                    <span class="switch "></span>
-                    </div>
-                </li>
-            </ul>
-        </dic>
-    </nav>
-    <section class="dashboard">
-        <div class="top">
-
-            <i class="uil uil-align-center-alt sidebar-toggle "></i>
-
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="search here ... ">
-            </div>
-            <div class="uzer-img">
-                <img src="img/uzer.jpg" alt="">
-            </div>
-            
-        </div>
-        <div class="dash-content">
-            <div class="overview">
-                <div class="title">
-                    <i class="uil uil-tachometer-fast"></i>
-                    <span class="text">Dashboard</span>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="img/logo.png" alt="">
                 </div>
+                <span class="logo-name">losPePes</span>
             </div>
-        </div>
-    </section>
+            <div class="menu-items">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">content</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="link-name">like</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <i class="uil uil-comments"></i>
+                        <span class="link-name">comment</span>
+                        </a>
+                    </li> 
+                    
+                </ul>
+                <ul class="mode" >
+                    <li class=" logout-mode">
+                        <a class="modes" href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">log out</span>
+                        </a>
+                    </li>
+                    <li class=" dark-mode" >
+                        <a class="modes" href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">dark mood</span>
+                        </a>
+                        <div class="mode-toggle"> 
+                        <span class="switch "></span>
+                        </div>
+                    </li>
+                </ul>
+            </dic>
+        </nav>
+        <section class="dashboard">
+            <div class="top">
+    
+                <div class="icon">
+                    <i class="uil uil-align-center-alt "></i>
+                </div>
+    
+                <div class="search-box">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="search here ... ">
+                </div>
+                <div class="user-img">
+                    <img src="img/uzer.jpg" alt="">
+                </div>
+                
+            </div>
+            <div class="dash-content">
+                <div class="overview">
+                    <div class="title">
+                        <i class="uil uil-tachometer-fast"></i>
+                        <span class="text">Dashboard</span>
+                    </div>
+                    <div class="boxes">
+                        <div class="box box1">
+                            <i class="icon uil uil-thumbs-up"></i>
+                            <span class="text">like</span>
+                            <span class="number">166,432</span>
+                        </div>
+                        <div class="box box2">
+                            <i class="uil uil-comments"></i>
+                            <span class="text">comment</span>
+                            <span class="number">787,600</span>
+                        </div>
+                        <div class="box box3">
+                            <i class="uil uil-files-landscapes"></i>
+                            <span class="text">content</span>
+                            <span class="number">123,456</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="title">
+                        <i class="uil uil-clock-three"></i>
+                        <span class="text">recent activity </span>
+                    </div>
+
+                    <div class="activity">
+                        <div class="activity-data">
+                                <div class="data names">
+                                    <span class="data-title">name</span>
+                                    <span class="data-list">prem sahi</span>
+                                    <span class="data-list">prem sahi</span>
+                                    <span class="data-list">prem sahi</span>
+                                    <span class="data-list">prem sahi</span>
+                                    <span class="data-list">prem sahi</span>
+                                    <span class="data-list">prem sahi</span>
+                                </div>
+                                <div class="data email">
+                                    <span class="data-title">email</span>
+                                    <span class="data-list">premshahi@gmail.com</span>
+                                    <span class="data-list">premshahi@gmail.com</span>
+                                    <span class="data-list">premshahi@gmail.com</span>
+                                    <span class="data-list">premshahi@gmail.com</span>
+                                    <span class="data-list">premshahi@gmail.com</span>
+                                    <span class="data-list">premshahi@gmail.com</span>
+                                </div>
+                                <div class="data joined">
+                                    <span class="data-title">joined</span>
+                                    <span class="data-list">2022-02-12</span>
+                                    <span class="data-list">2022-02-12</span>
+                                    <span class="data-list">2022-02-12</span>
+                                    <span class="data-list">2022-02-12</span>
+                                    <span class="data-list">2022-02-12</span>
+                                    <span class="data-list">2022-02-12</span>
+                                </div>
+                                <div class="data type">
+                                    <span class="data-title">Type</span>
+                                    <span class="data-list">new</span>
+                                    <span class="data-list">new</span>
+                                    <span class="data-list">new</span>
+                                    <span class="data-list">new</span>
+                                    <span class="data-list">new</span>
+                                    <span class="data-list">new</span>
+                                </div>
+                                <div class="data status">
+                                    <span class="data-title">Status</span>
+                                    <span class="data-list">Link</span>
+                                    <span class="data-list">Link</span>
+                                    <span class="data-list">Link</span>
+                                    <span class="data-list">Link</span>
+                                    <span class="data-list">Link</span>
+                                    <span class="data-list">Link</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>    
+                    
+                
+            </div>
+        </section>
+    </div>
 <script src="script.js"></script>   
 </body>
 </html>
